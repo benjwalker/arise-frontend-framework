@@ -1,0 +1,9 @@
+.footer {
+  background: $light-grey;
+  padding: 40px;
+  text-align: center;
+
+  &__container {
+    @extend .container;
+  }
+}

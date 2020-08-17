@@ -1,0 +1,8 @@
+.template {
+  background: $gold;
+  padding: 80px 0;
+
+  &__container {
+    @extend .container;
+  }
+}

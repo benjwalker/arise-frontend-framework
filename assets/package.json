@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "dependencies": {
+    "bourbon-neat": "3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "latest",
+    "gulp-csso": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jquery-cycle-2": "^1.0.3",
+    "jquery-easing": "^0.0.1"
+  }
+}

@@ -1,0 +1,170 @@
+//Any common custom mixins or utility classes, etc created by Arise
+
+@mixin selection($background, $color) {
+  &::-moz-selection {
+    background: $background;
+    color: $color
+  }
+
+  &::selection {
+    background: $background;
+    color: $color
+  }
+
+}
+
+@mixin transform($value...) {
+  -moz-transform: $value;
+  -ms-transform: $value;
+  -o-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
+
+@mixin transition($value...) {
+  -moz-transition: $value;
+  -o-transition: $value;
+  -webkit-transition: $value;
+  transition: $value;
+}
+
+@mixin columns($count, $gap) {
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -webkit-column-count: $count;
+  -webkit-column-gap: $gap;
+  column-count: $count;
+  column-gap: $gap;
+}
+
+@mixin box-sizing($value: border-box, $important: 0) {
+  $after: "";
+  @if $important != 0 {
+    $after: " !important";
+  }
+
+  -moz-box-sizing: $value#{$after};
+  -webkit-box-sizing: $value#{$after};
+  box-sizing: $value#{$after};
+}
+
+@mixin border-radius($radius: 8px, $important: 0) {
+
+  $after: "";
+  @if $important != 0 {
+    $after: " !important";
+  }
+
+  -moz-border-radius: $radius#{$after};
+  -webkit-border-radius: $radius#{$after};
+  border-radius: $radius#{$after};
+}
+
+@mixin box-shadow($value, $important: 0) {
+  $after: "";
+  @if $important != 0 {
+    $after: " !important";
+  }
+
+  box-shadow: $value#{$after};
+  -moz-box-shadow: $value#{$after};
+  -webkit-box-shadow: $value#{$after};
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@mixin overlay($background: $black, $opacity: 0.6) {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    opacity: $opacity;
+    z-index: 6;
+    display: block;
+  }
+}
+
+@mixin middle() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+@mixin animation($value) {
+  -moz-animation: $value;
+  -o-animation: $value;
+  -webkit-animation: $value;
+}
+
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-o-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @-webkit-keyframes #{$name}
+  {
+    @content;
+  }
+
+  @keyframes #{$name}
+  {
+    @content;
+  }
+}
+
+@mixin column-break-inside() {
+  column-break-inside: avoid;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: inline-block;
+}
+
+@mixin background-cover() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin background-contain() {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin greyscale() {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+@mixin colour() {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+@mixin avoid-page-breaks() {
+  page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+  page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+  page-break-inside: avoid; /* or 'auto' */
+}

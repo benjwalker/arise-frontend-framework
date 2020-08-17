@@ -1,0 +1,10 @@
+.header {
+  background: $dark-grey;
+  text-align: center;
+  color: $white;
+  padding: 40px;
+
+  &__container {
+    @extend .container;
+  }
+}
