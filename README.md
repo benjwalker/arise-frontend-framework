@@ -2,7 +2,7 @@
 
 This framework is intended to assist any front-end developer creating code for [Arise's web development projects](https://wearearise.com/web).
 
-##Requirements
+## Requirements
 
 To run this code you should have handy...
 
