@@ -1,7 +1,10 @@
 # Arise Front-end Framework
 
+This framework is intended to assist any front-end developer creating code for Arise's projects.
+
 ##Requirements
 To run this code you should have handy...
+
 - PHP / Apache
 - Composer
 - NPM
