@@ -4,7 +4,7 @@ This framework is intended to assist any front-end developer creating code for [
 
 ## Requirements
 
-To run this code you should have handy...
+Once checked out and installed on your local server, you'll need to make sure you have the following handy to run this code...
 
 - PHP / Apache
 - Composer
